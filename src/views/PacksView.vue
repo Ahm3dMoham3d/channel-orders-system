@@ -340,6 +340,7 @@ export default {
       oneCopy: false,
       dialog: false,
       doubleFace: false,
+      numPrice: 50,
       zenk: 45,
       printP: 30,
       packsGroupNumber: 500,
@@ -441,7 +442,7 @@ export default {
       );
     },
     NumPrice() {
-      return Math.ceil(Math.ceil(this.print / 1000)) * this.printP;
+      return Math.ceil(Math.ceil(this.print / 1000)) * this.numPrice;
     },
     totalPriceBefore() {
       let totalPriceBefore = "";
@@ -497,6 +498,7 @@ export default {
       this.printP = this.$store.getters.printP[0].value;
       this.finishPrice = this.$store.getters.bookFinishPrice[0].value;
       this.packsGroupNumber = this.$store.getters.packsGroupNumber[0].value;
+      this.numPrice = this.$store.getters.numPrice[0].value;
     } catch (error) {
       console.error("Error loading initial data:", error);
       // Optionally set default values or notify the user

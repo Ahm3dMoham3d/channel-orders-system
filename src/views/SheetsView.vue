@@ -335,6 +335,7 @@ export default {
       dialog: false,
       zenk: 45,
       printP: 30,
+      numPrice: 50,
       stackNumber: 50,
       bookFinishPrice: 4,
       // Today Date
@@ -456,7 +457,7 @@ export default {
       );
     },
     NumPrice() {
-      return Math.ceil(Math.ceil(this.print / 1000)) * this.printP || 0;
+      return Math.ceil(Math.ceil(this.print / 1000)) * this.numPrice || 0;
     },
     finishPrice() {
       return (
@@ -526,6 +527,7 @@ export default {
       this.printP = getters.printP[0]?.value || 0;
       this.stackNumber = getters.stackNumber[0]?.value || 0;
       this.bookFinishPrice = getters.bookFinishPrice[0]?.value || 0;
+      this.numPrice = getters.numPrice[0]?.value || 0;
     } catch (error) {
       console.error("Error loading initial data:", error);
       // Optionally set default values or notify the user

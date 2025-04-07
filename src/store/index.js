@@ -44,6 +44,9 @@ export default new Vuex.Store({
     letterPrice(state) {
       return state.consts.filter((cons) => cons.id == "letterPrice");
     },
+    numPrice(state) {
+      return state.consts.filter((cons) => cons.id == "0Cj92ZxXT6CK3uQ89qPD");
+    },
   },
   mutations: {
     // Order Number
